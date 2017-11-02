@@ -1,0 +1,45 @@
+<nav class="login--header dark-black-bg center">
+  <div class="row nav-wrapper">
+    <img class="icon-header--white--login" src="images/icons/ISOLOGO-BLANCO.png" alt="" />
+  </div>
+</nav>
+<div class="row col s12">
+  <div class="row col s12 m6 offset-m3 l4 offset-l4 m-top-100 grey-border white-bg center">
+    <md-content class="white-bg" layout-padding>
+      <img class="icon-header--yellow--login" src="images/icons/ISOLOGO-AMARILLO.png" alt="" />
+      <h6 class="m-top--10 light-black-text">School Manage</h6>
+      <form md-theme="schoolmanage-red-theme" class="col s10 offset-s1 m-top-20 m-bottom-20" name="login-schoolmanage" ng-submit="auth(login)">
+        <md-input-container class="md-block left-align">
+          <label>Usuario</label>
+          <input ng-model="login.username" required>
+          <div ng-messages="login.username" role="alert">
+            <div ng-message="required" ng-hide="login.username">
+              Debe completar este campo para continuar.
+            </div>
+          </div>
+        </md-input-container>
+        <br>
+        <md-input-container class="md-block left-align">
+          <label>Contraseña</label>
+          <input type="password" ng-model="login.password" required>
+          <div ng-messages="login.password" role="alert">
+            <div ng-message="required" ng-hide="login.password">
+              Debe completar este campo para continuar.
+            </div>
+          </div>
+        </md-input-container>
+        <div class="col s12 m-bottom-20 left">
+          <md-checkbox ng-model="login.remember" class="left" aria-label="Recordar mis datos">
+            Recuerdame
+          </md-checkbox>
+          <br>
+          <br>
+          <a href="#" class="red-text center">Olvide mi contraseña</a>
+          <br>
+        </div>
+        <br>
+        <md-button md-theme="schoolmanage-blue-theme" type="submit" class="md-raised md-primary padd-lr-20 m-top--5" ng-disabled="!(login.username && login.password)">Entrar</md-button>
+      </form>
+    </md-content>
+  </div>
+</div>

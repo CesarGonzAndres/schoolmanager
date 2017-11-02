@@ -1,0 +1,57 @@
+<md-toolbar md-scroll-shrink>
+  <div class="md-toolbar-tools red-bg">LISTADO DE ESTUDIANTES</div>
+</md-toolbar>
+<div class="row margin-lr-0 padd-20" md-theme="schoolmanage-red-theme">
+  <div class="row grey-border white-bg padd-20 col s12 m12 l10">
+    <md-content class="row col s12 white-bg padd-20">
+      <div class="col s12 m6 left-align">
+        <md-input-container class="md-block left">
+          <label>Ordenar por:</label>
+          <md-select name="type" ng-model="studentListOrder">
+            <md-option value="name">Nombre</md-option>
+            <md-option value="document">Cedula</md-option>
+          </md-select>
+        </md-input-container>
+      </div>
+      <div class="col s12 m6">
+        <md-input-container class="md-block right">
+          <label>Buscar</label>
+          <input ng-model="studentListFilter">
+        </md-input-container>
+      </div>
+      <table class="col s12 bordered responsive-table striped">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Género</th>
+            <th>Fecha de nacimiento</th>
+            <th>Cédula</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="student in students | filter:studentListFilter | orderBy:studentListOrder">
+            <td class="blue-text uppercase"><a ui-sref="app.studentDetails({id:student.id})"><b>{{student.name}} {{student.lastname}}</b></a></td>
+            <td>{{student.gender}}</td>
+            <td>{{student.birthdate}}</td>
+            <td>{{student.document}}</td>
+            <td class="center">
+              <md-button ng-click="deleteConfirm(student.id, $index)" class="md-icon-button center-button" aria-label="Delete">
+                <md-tooltip md-direction="top">Borrar</md-tooltip>
+                <i class="material-icons red-text text-darken-4">cancel</i>
+              </md-button>
+              <!-- <md-button class="md-icon-button center-button" aria-label="See" ui-sref="app.incomeState({id:student.id})">
+                <md-tooltip md-direction="top">Descripcion</md-tooltip>
+                <i class="material-icons green-text">assessment</i>
+              </md-button> -->
+              <md-button class="md-icon-button center-button" aria-label="See" ui-sref="app.studentDetails({id:student.id})">
+                <md-tooltip md-direction="top">Ver</md-tooltip>
+                <i class="material-icons blue-text">remove_red_eye</i>
+              </md-button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </md-content>
+  </div>
+</div>

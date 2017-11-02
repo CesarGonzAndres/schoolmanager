@@ -1,0 +1,21 @@
+.btn-upload {
+  background: red;
+}
+.btn-upload:hover {
+  background: white;
+}
+button:focus {
+  background-color: transparent;
+}
+.info-button {
+  position: absolute;
+  top: 4px;
+  right: 5px;
+  cursor: pointer;
+}
+.info-button-chips {
+  position: absolute;
+  bottom: 36px;
+  right: 10px;
+  cursor: pointer;
+}

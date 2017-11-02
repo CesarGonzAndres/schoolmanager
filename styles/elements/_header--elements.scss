@@ -1,0 +1,29 @@
+.icon-header--white {
+  margin-left: 100px;
+  width: 50px;
+}
+.icon-header--yellow {
+  width: 50px;
+  justify-content: center;
+}
+.icon-option-header {
+  margin-top: 5px;
+  width: 40px;
+}
+.header--right-option {
+  li {
+    a {
+      height: 50px;
+    }
+  }
+}
+.menu {
+  height: 50px;
+  position: absolute;
+  left: 0;
+  top: -7px;
+  color: $white;
+  .menu--icon {
+    margin-top: 14px;
+  }
+}
