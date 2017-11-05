@@ -70,16 +70,36 @@ angular
       params: {
        id: null
       }
-    });
+    })
+    //TEACHERS
+    .state('app.teachersList', {
+      url: 'teachersList',
+      templateUrl: 'views/teachers/teachersList.html',
+      controller: 'teachersListCtrl'
+    })
+    .state('app.newTeacher', {
+      url: 'newTeacher',
+      templateUrl: 'views/teachers/newTeacher.html',
+      controller: 'newStudentCtrl'
+    })
+    .state('app.teacherDetails', {
+      url: 'teacherDetails',
+      templateUrl: 'views/teachers/teacher.html',
+      controller: 'teacherDetailsCtrl',
+      params: {
+       id: null
+      }
+    })
+    ;
   })
   .config(function($mdThemingProvider) {
     $mdThemingProvider.theme('schoolmanage-red-theme')
-      .primaryPalette('red');
+      .primaryPalette('orange');
   })
   .config(function($mdThemingProvider) {
     $mdThemingProvider.theme('schoolmanage-blue-theme')
-      .primaryPalette('blue')
-      .accentPalette('red')
+      .primaryPalette('yellow')
+      .accentPalette('orange')
       .warnPalette('grey');
   })
   .config(function($mdThemingProvider) {
