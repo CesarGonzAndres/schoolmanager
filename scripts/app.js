@@ -84,13 +84,12 @@ angular
     })
     .state('app.teacherDetails', {
       url: 'teacherDetails',
-      templateUrl: 'views/teachers/teacher.html',
+      templateUrl: 'views/teachers/teacherDetails.html',
       controller: 'teacherDetailsCtrl',
       params: {
        id: null
       }
-    })
-    ;
+    });
   })
   .config(function($mdThemingProvider) {
     $mdThemingProvider.theme('schoolmanage-red-theme')

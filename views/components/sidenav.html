@@ -15,20 +15,8 @@
            <md-icon class="white-text">send</md-icon>
            <span flex>Mensajeria</span>
           </md-list-item>
-         <md-list-item ng-click="list.students = !list.students">
-          <md-icon class="white-text">person_outline</md-icon>
-          <span flex>Estudiantes</span>
-          <md-icon class="white-text" ng-show="!list.students">expand_more</md-icon>
-          <md-icon class="white-text" ng-show="list.students">expand_less</md-icon>
-         </md-list-item>
-           <md-list-item ng-show="list.students" ui-sref="app.newStudent" ui-sref-active="red-text">
-            <span class="sub-item">Nuevo estudiante</span>
-           </md-list-item>
-           <md-list-item ng-show="list.students" ui-sref="app.studentsList" ui-sref-active="red-text">
-            <span class="sub-item">Lista de estudiantes</span>
-           </md-list-item>
          <md-list-item ng-click="list.teachers = !list.teachers">
-          <md-icon class="white-text">supervisor_account</md-icon>
+          <md-icon class="white-text">person_outline</md-icon>
           <span flex>Maestros</span>
           <md-icon class="white-text" ng-show="!list.teachers">expand_more</md-icon>
           <md-icon class="white-text" ng-show="list.teachers">expand_less</md-icon>
@@ -38,6 +26,18 @@
            </md-list-item>
            <md-list-item ng-show="list.teachers" ui-sref="app.teachersList" ui-sref-active="red-text">
             <span class="sub-item">Lista de maestros</span>
+           </md-list-item>
+         <md-list-item ng-click="list.students = !list.students">
+          <md-icon class="white-text">supervisor_account</md-icon>
+          <span flex>Estudiantes</span>
+          <md-icon class="white-text" ng-show="!list.students">expand_more</md-icon>
+          <md-icon class="white-text" ng-show="list.students">expand_less</md-icon>
+         </md-list-item>
+           <md-list-item ng-show="list.students" ui-sref="app.newStudent" ui-sref-active="red-text">
+            <span class="sub-item">Nuevo estudiante</span>
+           </md-list-item>
+           <md-list-item ng-show="list.students" ui-sref="app.studentsList" ui-sref-active="red-text">
+            <span class="sub-item">Lista de estudiantes</span>
            </md-list-item>  
            <md-list-item ui-sref-active="red-text">
              <md-icon class="white-text">search</md-icon>

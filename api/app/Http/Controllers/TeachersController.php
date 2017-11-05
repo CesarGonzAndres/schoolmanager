@@ -72,16 +72,16 @@ class TeachersController extends Controller
     
     public function getTeacher(Request $request, $id)
     {
-        if ($request->isJson()) {
+        // if ($request->isJson()) {
             try {
                 $teacher = Teacher::findOrFail($id);
                 return response()->json($teacher, 200);
             } catch (ModelNotFoundException $e) {
                 return response()->json(['error' => 'No content'], 406);
             }
-        } else {
-            return response()->json(['error' => 'Unauthorized'], 401, []);
-        }
+        // } else {
+        //     return response()->json(['error' => 'Unauthorized'], 401, []);
+        // }
     }
 
     public function deleteTeacher(Request $request, $id)
