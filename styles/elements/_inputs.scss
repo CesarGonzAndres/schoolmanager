@@ -1,0 +1,101 @@
+md-input-container.md-input-invalid .md-input {
+  margin-bottom: 0;
+}
+
+// INPUTS
+input:not([type]), input[type=email], md-select, textarea, md-input-container .md-input, md-input-container .md-input  {
+  border: 1px solid $grey;
+  background: $light-grey;
+  text-indent: 10px;
+  color: $dark-black;
+  transition: .1s;
+  &:focus {
+    background: $white;
+    border: 1px solid $red !important;
+    box-shadow: none !important;
+    background: $white;
+  }
+}
+
+// //TYPE EMAIL
+md-input-container:not(.md-input-has-value) input:not(:focus), md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-ampm-field, md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-day-field, md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-hour-field, md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-millisecond-field, md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-minute-field, md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-month-field, md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-second-field, md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-week-field, md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-year-field, md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-text {
+  border: 1px solid $grey;
+  background: $light-grey;
+  text-indent: 10px;
+  color: $dark-black;
+  transition: .1s;
+  height: 30px;
+}
+
+//EMAIL HOVER
+md-input-container.md-input-focused .md-input, md-input-container .md-input.ng-invalid.ng-dirty, md-input-container.md-input-resized .md-input {
+  background: $red;
+  border: 1px solid $red;
+  box-shadow: none !important;
+  background: $white;
+  height: 30px;
+}
+
+//EMAIL VALID
+input:not([type]), input[type=text]:not(.browser-default), input[type=password]:not(.browser-default), input[type=email]:not(.browser-default), input[type=url]:not(.browser-default), input[type=time]:not(.browser-default), input[type=date]:not(.browser-default), input[type=datetime]:not(.browser-default), input[type=datetime-local]:not(.browser-default), input[type=tel]:not(.browser-default), input[type=number]:not(.browser-default), input[type=search]:not(.browser-default), textarea.materialize-textarea {
+  border: 1px solid $grey;
+  background: $light-grey;
+  height: 30px;
+  color: $dark-black;
+  text-indent: 10px;
+}
+
+md-input-container.md-input-focused label:not(.md-no-float), md-input-container.md-input-has-placeholder label:not(.md-no-float), md-input-container.md-input-has-value label:not(.md-no-float) {
+  font-size: 18px;
+}
+md-input-container {
+  margin: 0 0 20px 0;
+}
+
+.inputdemoErrors .inputErrorsApp {
+  min-height: 48px;
+}
+
+.inputdemoErrors md-input-container > p {
+  font-size: 0.8em;
+  text-align: left;
+  width: 100%;
+}
+
+//CHIPS INPUT
+md-chips.md-escort-red-theme-theme .md-chips .md-chip-input-container input {
+  border: 1px solid $grey;
+  background: $light-grey;
+  text-indent: 10px;
+  color: $dark-black;
+  transition: .1s;
+  margin-top: 20px;
+  &:focus {
+    background: $white;
+    border: 1px solid $red !important;
+    box-shadow: none !important;
+    background: $white;
+  }
+}
+.md-chips .md-chip-input-container {
+  float: none;
+}
+//CHIPS CONTAINER
+md-chips.md-escort-red-theme-theme .md-chips{
+  border: none;
+  box-shadow: none;
+}
+md-chips.md-escort-red-theme-theme .md-chips.md-focused {
+  border: none;
+  box-shadow: none;
+}
+
+md-input-container.md-escort-red-theme-theme .md-input {
+  &:focus {
+    background: $white;
+  }
+}
+
+md-autocomplete-wrap.md-whiteframe-z1.md-show-clear-button {
+  display: block;
+}

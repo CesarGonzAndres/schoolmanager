@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>School Manage</title>
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- build:css styles/vendor.css fav-->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="./libs/materialize/dist/css/materialize.css" />
+    <link rel="stylesheet" href="./libs/angular-material/angular-material.css" />
+    <link rel="stylesheet" href="./libs/angular-carousel/dist/angular-carousel.css" />
+    <link rel="stylesheet" href="./libs/ng-img-crop/compile/minified/ng-img-crop.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+  </head>
+  <body ng-app="schoolManage">
+    <!--[if IE]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <ui-view></ui-view>
+
+    <!-- build:js ./scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="./libs/angular/angular.js"></script>
+    <script src="./libs/angular-aria/angular-aria.js"></script>
+    <script src="./libs/angular-resource/angular-resource.js"></script>
+    <script src="./libs/angular-route/angular-route.js"></script>
+    <script src="./libs/angular-sanitize/angular-sanitize.js"></script>
+    <script src="./libs/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="./libs/angular-translate/angular-translate.js"></script>
+    <script src="./libs/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
+    <script src="./libs/jquery/dist/jquery.js"></script>
+    <script src="./libs/materialize/dist/js/materialize.js"></script>
+    <script src="./libs/angular-animate/angular-animate.js"></script>
+    <script src="./libs/angular-messages/angular-messages.js"></script>
+    <script src="./libs/angular-material/angular-material.js"></script>
+    <script src="./libs/angular-touch/angular-touch.js"></script>
+    <script src="./libs/angular-carousel/dist/angular-carousel.js"></script>
+    <script src="./libs/ngMask/dist/ngMask.js"></script>
+    <script src="./libs/ng-file-upload/ng-file-upload.js"></script>
+    <script src="./libs/ng-img-crop/compile/minified/ng-img-crop.js"></script>
+    <script src="./libs/satellizer/dist/satellizer.js"></script>
+    <script src="./libs/ng-droplet/dist/ng-droplet.min.js"></script>
+    <script src="./libs/ngstorage/ngStorage.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js ./scripts/main.js -->
+    <script src="./scripts/app.js"></script>
+    <script src="./scripts/configs/constants.js"></script>
+    <script src="./scripts/configs/satellizer.config.js"></script>
+    <script src="./scripts/configs/config.js"></script>
+    <script src="./scripts/controllers/main.js"></script>
+    <script src="./scripts/controllers/auth/login.js"></script>
+    <script src="./scripts/controllers/components/sidenav.js"></script>
+    <script src="./scripts/controllers/components/header.js"></script>
+    <script src="./scripts/controllers/messaging/messaging.js"></script>
+    <script src="./scripts/controllers/students/newStudent.js"></script>
+    <script src="./scripts/controllers/students/studentsList.js"></script>
+    <script src="./scripts/controllers/students/studentDetails.js"></script>
+    <script src="./scripts/controllers/teachers/newTeacher.js"></script>
+    <script src="./scripts/controllers/teachers/teachersList.js"></script>
+    <script src="./scripts/controllers/teachers/teacherDetails.js"></script>
+    <script src="./scripts/services/student.js"></script>
+    <script src="./scripts/services/teacher.js"></script>
+    <script src="./scripts/services/images.js"></script>
+    <script src="./scripts/filters/utc.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>

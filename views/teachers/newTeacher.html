@@ -1,0 +1,183 @@
+<md-toolbar md-scroll-shrink>
+  <div class="md-toolbar-tools red-bg">CREAR NUEVO PROFESOR</div>
+</md-toolbar>
+<div class="row margin-lr-0 padd-20" md-theme="schoolmanage-red-theme">
+  <div class="row grey-border white-bg padd-20 col s12 l9">
+    <div ng-cloak>
+      <md-content>
+        <form name="newTeacherForm">
+          <md-tabs md-dynamic-height md-border-bottom md-align-tabs="bottom">
+            <md-tab label="Paso 1 >">
+              <md-subheader class="md-primary red-text">Informacion del Profesor</md-subheader>
+              <md-divider></md-divider>
+              <md-content class="md-padding col s12 m10">
+                <br>
+                <br>
+                <md-input-container class="md-block">
+                  <label>Nombres</label>
+                  <input ng-model="teacher.name" required>
+                  <div ng-messages="teacher.name" role="alert">
+                    <div ng-message="required" ng-hide="teacher.name">
+                      Debe completar este campo para continuar.
+                    </div>
+                  </div>
+                </md-input-container>
+                <md-input-container class="md-block">
+                  <label>Apellidos</label>
+                  <input ng-model="teacher.lastname" required>
+                  <div ng-messages="teacher.lastname" role="alert">
+                    <div ng-message="required" ng-hide="teacher.lastname">
+                      Debe completar este campo para continuar.
+                    </div>
+                  </div>
+                </md-input-container>
+                <md-input-container class="md-block">
+                  <label>Correo</label>
+                  <input type="email" ng-model="teacher.email" required>
+                  <div ng-messages="teacher.email" role="alert">
+                    <div ng-message="required" ng-hide="teacher.email">
+                      Debe completar este campo para continuar.
+                    </div>
+                  </div>
+                </md-input-container>
+                <br>
+              </md-content>
+            </md-tab>
+            <md-tab label="Paso 2 >" ng-disabled="!(teacher.name && teacher.email && teacher.lastname)">
+              <md-subheader class="md-primary red-text">Información del Representante</md-subheader>
+              <md-divider></md-divider>
+              <md-content class="md-padding col s12 m10">
+                <br>
+                <br>
+                <md-input-container class="md-block">
+                  <label>Género</label>
+                  <md-select name="type" ng-model="teacher.gender" required>
+                    <md-option value="hombre">Hombre</md-option>
+                    <md-option value="mujer">Mujer</md-option>
+                  </md-select>
+                  <div ng-messages="teacher.gender" role="alert">
+                    <div ng-message="required" ng-hide="teacher.gender">
+                      Debe completar este campo para continuar.
+                    </div>
+                  </div>
+                </md-input-container>
+                <br>
+                <br>
+                <div flex-gt-xs>
+                  <label>Fecha de nacimiento</label>
+                  <md-datepicker ng-model="teacher.birthdate"></md-datepicker>
+                </div>
+                <br>
+                <br>
+                <md-input-container class="md-block">
+                  <label>Teléfono</label>
+                  <input ng-model="teacher.phone" type="tel" placeholder="(###) ###-####" mask="(999) 999-9999" ng-pattern="/^[(][0-9]{3}[)] [0-9]{3}-[0-9]{4}$/" required>
+                  <div ng-messages="teacher.phone" role="alert">
+                    <div ng-message="required" ng-hide="teacher.phone">
+                      Debe completar este campo para continuar.
+                    </div>
+                  </div>
+                </md-input-container>
+                <md-input-container class="md-block">
+                  <label>Teléfono Opcional</label>
+                  <input ng-model="teacher.phone_optional" type="tel" placeholder="(###) ###-####" mask="(999) 999-9999" ng-pattern="/^[(][0-9]{3}[)] [0-9]{3}-[0-9]{4}$/">
+                  <div ng-messages="teacher.phone_optional" role="alert">
+                    <div ng-message="tel" ng-hide="teacher.phone_optional">
+                      Debe completar este campo para continuar.
+                    </div>
+                  </div>
+                </md-input-container>
+                <md-input-container class="md-block">
+                  <label>Estado</label>
+                  <input ng-model="teacher.state" required>
+                  <div ng-messages="teacher.state" role="alert">
+                    <div ng-message="required" ng-hide="teacher.state">
+                      Debe completar este campo para continuar.
+                    </div>
+                  </div>
+                </md-input-container>
+                <br>
+                <md-input-container class="md-block">
+                  <label>Ciudad</label>
+                  <input ng-model="teacher.city" required>
+                  <div ng-messages="teacher.city" role="alert">
+                    <div ng-message="required" ng-hide="teacher.city">
+                      Debe completar este campo para continuar.
+                    </div>
+                  </div>
+                </md-input-container>
+                <div md-theme="schoolmanage-green-theme" ng-show="(teacher.name && teacher.lastname && teacher.email && teacher.birthdate && teacher.gender && teacher.phone && teacher.state && teacher.city)" ng-hide="!(teacher.name && teacher.lastname && teacher.email && teacher.birthdate && teacher.gender && teacher.phone && teacher.state && teacher.city)">
+                  <md-toolbar class="md-warn md-default">
+                    <div class="md-toolbar-tools white-text">
+                      <h6><b>Listo</b> Continue al siguiente paso.</h6>
+                    </div>
+                    <span hide-xs hide-sm show-gt-sm class="bot-arrow l-228"></span>
+                  </md-toolbar>
+                </div>
+                <br>
+              </md-content>
+            </md-tab>
+            <md-tab label="Paso 3 >" ng-disabled="!(teacher.name && teacher.lastname && teacher.birthdate && teacher.gender && teacher.phone && teacher.phone_optional && teacher.state && teacher.city)">
+              <md-subheader class="md-primary red-text">Informacion del Estudiante</md-subheader>
+              <md-divider></md-divider>
+              <md-content class="md-padding col s12 m10">
+                <br>
+                <br>
+                <!-- <md-input-container class="md-block">
+                  <label>Nombre del estudiante</label>
+                  <input ng-model="student.student_name" required>
+                  <div ng-messages="student.student_name" role="alert">
+                    <div ng-message="required" ng-hide="student.student_name">
+                      Debe completar este campo para continuar.
+                    </div>
+                  </div>
+                  <i class="material-icons grey-text info-button"><md-tooltip md-direction="top">Caracteres alfanuméricos no permitidos</md-tooltip>info</i>
+                </md-input-container> -->
+                <md-input-container class="md-block">
+                  <label>Cédula de identidad</label>
+                  <input ng-model="teacher.document" required>
+                  <div ng-messages="teacher.document" role="alert">
+                    <div ng-message="required" ng-hide="teacher.document">
+                      Debe completar este campo para continuar.
+                    </div>
+                  </div>
+                </md-input-container>
+                <br>
+                <md-input-container class="md-block">
+                  <label>Descripción</label>
+                  <textarea ng-model="teacher.description" md-maxlength="140" rows="5" md-select-on-focus required></textarea>
+                  <div ng-messages="teacher.description" role="alert">
+                    <div ng-message="required" ng-hide="teacher.description">
+                      Debe completar este campo para continuar.
+                    </div>
+                  </div>
+                </md-input-container>
+                <br>
+                <md-input-container class="md-block">
+                  <label>Dirección</label>
+                  <textarea ng-model="teacher.address" md-maxlength="140" rows="5" md-select-on-focus required></textarea>
+                  <div ng-messages="teacher.address" role="alert">
+                    <div ng-message="required" ng-hide="teacher.address">
+                      Debe completar este campo para continuar.
+                    </div>
+                  </div>
+                </md-input-container>
+                <br>
+                <div md-theme="schoolmanage-green-theme" ng-show="(teacher.description && teacher.document && teacher.address)" ng-hide="!(teacher.document && teacher.description && teacher.address)">
+                  <md-toolbar class="md-warn md-default">
+                    <div class="md-toolbar-tools white-text">
+                      <h6><b>Listo</b> click Guardar para completar el registro</h6>
+                    </div>
+                    <span hide-xs hide-sm show-gt-sm class="bot-arrow l-328"></span>
+                  </md-toolbar>
+                </div>
+                <br>
+              </md-content>
+            </md-tab>
+          </md-tabs>
+         <md-button md-theme="schoolmanage-blue-theme" class="md-raised md-primary padd-lr-20 m-left-0 m-top-20" ng-hide="!(teacher.description && teacher.address)" ng-click="newTeacher(teacher)">Guardar</md-button>
+        </form>
+      </md-content>
+      </div>
+    </div>
+  </div>

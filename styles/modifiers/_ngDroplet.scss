@@ -1,0 +1,183 @@
+section.droplet {
+  margin: auto;
+  text-align: left;
+  position: relative;
+}
+section.droplet droplet {
+  display: inline-block;
+  z-index: 2;
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin-top: -5px;
+  padding-top: 5px;
+  transition: box-shadow 0.35s;
+  background: $light-grey;
+  border: 3px dashed $grey;
+}
+section.droplet droplet div.loading.visible {
+  opacity: 1;
+}
+section.droplet droplet.event-dragover {
+  box-shadow: inset 0 0 100px rgba(255, 255, 255, .25), inset 0 0 5px rgba(255, 255, 255, .25);
+}
+section.droplet droplet comment:after {
+  content: "Coloca aquí una imagen...";
+  width: 100%;
+  pointer-events: none;
+  display: inline-block;
+  position: absolute;
+  z-index: -1;
+  text-decoration: none;
+  font-size: 15px;
+  line-height: 70px;
+  text-align: center;
+}
+section.droplet droplet.event-dragover comment:after {
+  content: "...dejala aquí!";
+}
+section.droplet droplet ul.files {
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+  padding: 5px;
+  list-style-type: none;
+  transition: all .5s;
+}
+section.droplet.uploading droplet ul.files {
+  opacity: .25;
+  filter: blur(2px);
+  -o-filter: blur(2px);
+  -moz-filter: blur(2px);
+  -webkit-filter: blur(2px);
+  pointer-events: none;
+}
+section.droplet droplet ul.files li {
+  width: 100px;
+  height: 100px;
+  padding: 1px;
+  float: left;
+  position: relative;
+  margin: 5px;
+  width: 100px;
+}
+section.droplet droplet ul.files li img.droplet-preview {
+  max-width: 96px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 96px;
+  width: 96px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .25);
+  border: 1px solid white;
+  display: block;
+}
+section.droplet droplet ul.files li div.delete {
+  background-color: rgba(0, 0, 0, .25);
+  width: 50px;
+  height: 50px;
+  color: white;
+  font-size: 25px;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, .25);
+  text-align: center;
+  cursor: pointer;
+  line-height: 50px;
+  position: absolute;
+  border-radius: 50%;
+  z-index: 101;
+  top: 25px;
+  left: 25px;
+  opacity: 0;
+  transition: all .30s;
+  transform: scale(0.5);
+}
+section.droplet droplet ul.files li:hover div.delete {
+  opacity: 1;
+  transform: scale(1);
+}
+section.droplet droplet ul.files li div.delete:hover {
+  background-color: rgba(0, 0, 0, .45);
+}
+section.droplet droplet ul.files li div.size {
+  background-color: rgba(255, 255, 255, .5);
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  pointer-events: none;
+  font-size: 9px;
+  padding: 1px 4px;
+}
+section.droplet section.message {
+  z-index: 2001;
+  width: 100%;
+  height: 1;
+  opacity: 0;
+  color: white;
+  font-size: 15px;
+  transition: all .55s;
+  padding: 0 12px 0 12px;
+  top: -10px;
+  cursor: pointer;
+}
+section.droplet section.message.visible {
+  transition: all .55s;
+  opacity: 1;
+  padding: 15px 12px 10px 12px;
+  top: 0;
+}
+section.droplet section.message.success {
+    background: $blue;
+    color: $white;
+}
+section.droplet section.message.error {
+    background: $red;
+    color: $white;
+}
+section.droplet section.toolbar {
+  margin-top: 20px;
+  position: relative;
+  z-index: 3;
+  height: 50px;
+}
+section.droplet section.toolbar div.add-files {
+  float: left;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+section.droplet section.toolbar div.add-files input.droplet-multiple {
+  position: absolute;
+  top: 7px;
+  font-size: 28px;
+  left: -90px;
+  z-index: 1001;
+  opacity: 0.0001;
+  cursor: pointer;
+}
+section.droplet section.toolbar input.upload-files {
+    transition: background-color 0.25s;
+    outline: none;
+    pointer-events: none;
+    color: rgba(0, 0, 0, .15);
+}
+section.droplet section.toolbar input.upload-files.clickable {
+    pointer-events: all;
+    color: rgba(0, 0, 0, .75);
+}
+section.droplet section.toolbar comment.progress {
+    display: inline-block;
+    height: 25px;
+    line-height: 25px;
+    float: right;
+    overflow: hidden;
+    color: $white;
+    font-size: 10px;
+    padding: 0 8px;
+    opacity: 0;
+    transition: all 0.55s;
+    background-color: $green;
+}
+section.droplet section.toolbar comment.progress.visible {
+    margin-right: 0;
+    opacity: 1;
+}

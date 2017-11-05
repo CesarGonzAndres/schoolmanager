@@ -1,0 +1,7 @@
+nav {
+  display: block;
+  height: 50px;
+  @media (max-width: 959px) {
+    display: flex;
+  }
+}

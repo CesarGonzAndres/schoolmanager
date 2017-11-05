@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css?family=Reem+Kufi');
+body {
+  background: $light-grey;
+  color: $dark-black;
+  font-family: 'Reem Kufi' !important;
+}
+input:not([type]), md-select, textarea, md-input-container .md-input, md-input-container .md-input  {
+  border: 1px solid $grey;
+  background: $light-grey;
+  text-indent: 10px;
+  color: $dark-black;
+  transition: .1s;
+  &:focus {
+    background: $white;
+    border: 1px solid $red;
+    box-shadow: none !important;
+    background: $white;
+  }
+}
+md-input-container label:not(.md-no-float):not(.md-container-ignore), md-input-container .md-placeholder {
+  text-indent: 10px;
+  font-size: 14px;
+}
+md-input-container.md-input-focused label:not(.md-no-float), md-input-container.md-input-has-placeholder label:not(.md-no-float), md-input-container.md-input-has-value label:not(.md-no-float) {
+  font-size: 18px;
+}
+.inputdemoErrors .inputErrorsApp {
+  min-height: 48px; }
+
+.inputdemoErrors md-input-container > p {
+  font-size: 0.8em;
+  text-align: left;
+  width: 100%;
+}
+.md-button.md-default-theme:not([disabled]).md-focused, .md-button:not([disabled]).md-focused, .md-button.md-default-theme:not([disabled]):hover, .md-button:not([disabled]):hover {
+  background: transparent;
+}
+md-input-container.md-block {
+  padding: 0;
+}
+input:not([type]), input[type=text]:not(.browser-default), input[type=password]:not(.browser-default), input[type=email]:not(.browser-default), input[type=url]:not(.browser-default), input[type=time]:not(.browser-default), input[type=date]:not(.browser-default), input[type=datetime]:not(.browser-default), input[type=datetime-local]:not(.browser-default), input[type=tel]:not(.browser-default), input[type=number]:not(.browser-default), input[type=search]:not(.browser-default), textarea.materialize-textarea {
+  margin: 0;
+}
+[type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+  position: relative;
+  pointer-events: auto !important;
+  opacity: 1 !important;
+}
+._md-datepicker-floating-label._md-datepicker-has-calendar-icon > label:not(.md-no-float):not(.md-container-ignore) {
+  left: 0;
+  right: inherit;
+  width: auto;
+}
+button.md-chip-remove.ng-scope {
+  z-index: 100;
+}
+.md-chips.md-removable md-chip {
+  font-family: 'Reem Kufi' !important;
+}

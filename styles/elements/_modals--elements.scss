@@ -1,0 +1,16 @@
+.modal--container {
+  // background: $red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  .icon--yellow {
+    width: 50px;
+    justify-content: center;
+  }
+  .principal-message {
+    margin-top: -5px;
+    font-size: 15px;
+    font-weight: bold
+  }
+}
