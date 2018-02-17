@@ -35,10 +35,7 @@ return [
     */
 
     'guards' => [
-        'api' => [
-            'driver' => 'jwt',
-            'provider' => 'users'
-        ],
+        'api' => ['driver' => 'api'],
     ],
 
     /*
@@ -59,10 +56,7 @@ return [
     */
 
     'providers' => [
-        'users' => [
-            'driver' => 'eloquent',
-            'model'  => app('config')->get('jwt.user'),
-        ]
+        //
     ],
 
     /*
