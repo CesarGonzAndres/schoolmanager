@@ -1,4 +1,9 @@
+# Run frontend
 
-# My project's README
-# My project's README
+* bower install
+* gulp serve
 
+# API installation _(lumen)
+
+* cd api/
+* composer update
